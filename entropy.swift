@@ -24,8 +24,8 @@ class entropy {
     func calcSeed(pw: String) -> UInt {
         var seed: UInt = 0;
         let u_array = [UInt16](pw.utf16)
-        for (var i = 0; i < count(u_array); i++) { //cycle through each character
-            var multiplier = Int(pow(Double(10), Double(i))); //so the order of the characters matter, sort of "adds" the number numerically and sequentially
+        for (var i = 0; i < u_array.count; i++) { //cycle through each character
+            let multiplier = Int(pow(Double(10), Double(i))); //so the order of the characters matter, sort of "adds" the number numerically and sequentially
             seed += UInt(multiplier * Int(u_array[i])); //adds to the seed
         }
         return seed;

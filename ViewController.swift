@@ -28,9 +28,9 @@ class ViewController: NSViewController {
   
     @IBAction func encodePressed(sender: AnyObject) { //gets password, message ->encode
         //TODO: add encode function
-        var encode_instance = cipher(); //instance of cipher class
-        println(encode_instance.encode(userPassword.stringValue, messageInput.stringValue));
-        println("Encode button was pressed."); //DEBUG, Encode button press
+        let encode_instance = cipher(); //instance of cipher class
+        print(encode_instance.encode(userPassword.stringValue, messageInput.stringValue));
+        print("Encode button was pressed."); //DEBUG, Encode button press
         
     }
     
@@ -38,12 +38,12 @@ class ViewController: NSViewController {
     @IBOutlet weak var outputField: NSScrollView!
     @IBAction func sendMessage(sender: AnyObject) {
         //TODO: add share function
-        println("Send/share button was pressed"); //DEBUG, share button pressed
+        print("Send/share button was pressed"); //DEBUG, share button pressed
     }
     @IBAction func decodePressed(sender: AnyObject) { //gets password, message -> decode
-        println("Decode button was pressed.") //DEBUG, Decode button pressed
-        var decode_instance = cipher(); //creating instance of the cipher class
-        println(decode_instance.decode(userPassword.stringValue, inputField.stringValue));
+        print("Decode button was pressed.") //DEBUG, Decode button pressed
+        let decode_instance = cipher(); //creating instance of the cipher class
+        print(decode_instance.decode(userPassword.stringValue, inputField.stringValue));
     }
     
 

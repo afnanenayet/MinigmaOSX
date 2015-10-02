@@ -12,9 +12,9 @@ import Foundation
 class cipher {
     //password, message
     func encode(pw: String, _ mess: String) -> String {
-        var decodedMessage: String = "DEBUG";
-        var p_rand = entropy()
-        println(p_rand.calcSeed(pw)); //gets the seed randomness
+        let decodedMessage: String = "DEBUG";
+        let p_rand = entropy()
+        print(p_rand.calcSeed(pw)); //gets the seed randomness
         
         return decodedMessage;
     }
